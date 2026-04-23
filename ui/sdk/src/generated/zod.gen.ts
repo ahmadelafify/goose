@@ -329,6 +329,14 @@ export const zUpdateSessionProjectRequest = z.object({
 });
 
 /**
+ * Rename a session.
+ */
+export const zRenameSessionRequest = z.object({
+    sessionId: z.string(),
+    title: z.string()
+});
+
+/**
  * Archive a session (soft delete).
  */
 export const zArchiveSessionRequest = z.object({
@@ -633,6 +641,7 @@ export const zExtRequest = z.object({
             zExportSessionRequest,
             zImportSessionRequest,
             zUpdateSessionProjectRequest,
+            zRenameSessionRequest,
             zArchiveSessionRequest,
             zUnarchiveSessionRequest,
             zCreateSourceRequest,
